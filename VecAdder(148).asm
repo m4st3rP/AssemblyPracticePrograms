@@ -14,7 +14,7 @@ LOOP		LDR		r5,[r3]
 		STR		r0,[r6]
 		
 ALIGN
-Size		DCD		3 ; 1 Wort, enthaelt Anzahl der Woerter
-Vec		DCD		3,-1,2 ; 3 Woerter
-Tot		FILL		4 ; Reserviert 4 Bytes fuer Ergebnis
+Size		DCD		3 		; 1 Wort, enthaelt Anzahl der Woerter
+Vec		DCD		3,-1,2 		; 3 Woerter
+Tot		FILL		4 		; Reserviert 4 Bytes fuer Ergebnis
 		END
