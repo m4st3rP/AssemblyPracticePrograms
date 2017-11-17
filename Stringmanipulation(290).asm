@@ -26,14 +26,14 @@ main	PROC
 		LDR		r5,=stringe	;r5 ist die Adresse des Ende des Strings
 		LDR		r0,=nstring	;r0 ist die Adresse des Neuen String
 		SUB		r6,r5,r1	;Die Länge des Strings wird ermittelt und in r6 geladen, als Zähler
-loop	LDRB	r2,[r1]		;Das aktuelle Zeichen des Strings wird in r2 geladen
-		SUBS	r2,r2,#58	;Der Wert des aktuellen Zeichen wird mit 58 subtrahiert, alle Zahlen sind nun negativ, alle Schriftzeichen positiv
+loop		LDRB		r2,[r1]		;Das aktuelle Zeichen des Strings wird in r2 geladen
+		SUBS		r2,r2,#58	;Der Wert des aktuellen Zeichen wird mit 58 subtrahiert, alle Zahlen sind nun negativ, alle Schriftzeichen positiv
 		BMI		dann		;Wenn das Zeichen negativ ist springe zu "dann"
 		B		sonst		;Ansonsten zu "sonst"
-dann	MOV		r4,#"1"		;Lade in r4 den Wert "1"
+dann		MOV		r4,#"1"		;Lade in r4 den Wert "1"
 		B		skip		;Springe zu skip um zu verhindern, dass "0" in r4 geladen wird
-sonst	MOV		r4,#"0"		;In r4 wird der Wert "0" geladen
-skip	STRB	r4,[r0]		;Lade r4 zur aktuellen Stelle von r0
+sonst		MOV		r4,#"0"		;In r4 wird der Wert "0" geladen
+skip		STRB		r4,[r0]		;Lade r4 zur aktuellen Stelle von r0
 		ADD		r1,r1,#1	;Gehe zur nächsten Stelle des Strings
 		ADD		r0,r0,#1	;Gehe zur nächsten Stelle des Endstrings
 		SUB		r6,r6,#1	;Subtrahiere vom Zähler 1
