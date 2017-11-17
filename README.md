@@ -5,3 +5,5 @@ Bitcompare in ShiftAndRotate(316).asm sets r2 to 0 if Bit 0 and Bit 7 of r1 are 
 RotateL5 in ShiftAndRotate(316).asm shifts Bit 0 to 4 in r0 one digit to the left while not touching bit 5 to 31.
 
 aCounter(289).asm counts how many "a" a String that ends with 0 has and saves the amount to r0.
+
+Stringmanipulation(290).asm creates a String from another String but changes all numbers to 1 and all other characters to 0.
